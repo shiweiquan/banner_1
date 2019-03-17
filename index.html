@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title><!--<link rel="stylesheet/less" type="text/css" href="./css/index.less" />-->
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body{
+            width:100%;
+            height:100%;
+            background-color: #0f0;
+
+        }
+        li{
+            list-style: none;
+        }
+        .box {
+            position: relative;
+            margin: 200px auto;
+            width: 1100px;
+            height: 360px;
+            /*border: 1px solid #ccc;*/
+            box-shadow: 1px 2px 2px #cccccc;
+
+        }
+        ul{
+            width:100%;
+            height:100%;
+        }
+
+        .picBox li{
+            float: left;
+            height: 100%;
+            background-color: #ddd;
+
+            box-sizing: border-box;
+            /*border:1px solid #fff;*/
+            transform-style: preserve-3d;
+            transition:all 0.3s;
+        }
+        .picBox li div{
+            width:100%;
+            height:100%;
+            background-color: #ddd;
+            position: absolute;
+            background-repeat: no-repeat!important;
+
+        }
+
+        .picBox li div:nth-child(1){
+            background:url("./img/pic1.jpg");
+            transform-origin: bottom;
+            top:-360px;
+            transform:translateZ(180px) rotateX(90deg);
+        }
+        .picBox li div:nth-child(2){
+            background:url("./img/pic2.jpg");
+            top:360px;
+            transform-origin: top;
+            transform:translateZ(180px) rotateX(-90deg);
+        }
+        .picBox li div:nth-child(3){
+            background:url("./img/pic3.jpg");
+            transform:translateZ(180px) ;
+        }
+        .picBox li div:nth-child(4){
+            background:url("./img/pic4.jpg");
+            transform:translateZ(-180px) rotateX(180deg);
+        }
+        ol {
+            position: absolute;
+            bottom:-30px;
+            left : 50%;
+            margin-left:-50px;
+        }
+        ol li{
+            float: left;
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            margin: 0 10px;
+            background-color: lightcyan;
+            text-align: center;
+            line-height: 25px;
+        }
+    </style>
+
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="box">
+        <ul class="picBox">
+
+        </ul>
+        <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+</body>
+</html>
